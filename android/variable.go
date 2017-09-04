@@ -119,6 +119,7 @@ type variableProperties struct {
 
 		// include Candy variables
 		Candy android.Product_variables
+
 	} `android:"arch_variant"`
 }
 
