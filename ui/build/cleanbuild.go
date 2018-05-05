@@ -171,3 +171,12 @@ func installCleanIfNecessary(ctx Context, config Config) {
 
 	writeConfig()
 }
+
+// Remove everything relevant for a clean ota package
+func deviceClean(ctx Context, config Config, what int) {
+
+	productOutPath := config.ProductOut()
+
+	removeGlobs(ctx, productOutPath)
+	ctx.Println(productOutPath, "removed.")
+}
