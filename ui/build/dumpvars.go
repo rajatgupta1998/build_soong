@@ -117,18 +117,64 @@ var BannerVars = []string{
 	"RECOVERY_VARIANT",
 	"WITH_SU",
 	"WITH_GMS",
+	"TARGET_GCC_VERSION",
 }
 
 func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
-	fmt.Fprintln(b, "============================================")
-	for _, name := range BannerVars {
-		if make_vars[name] != "" {
-			fmt.Fprintf(b, "%s=%s\n", name, make_vars[name])
-		}
-	}
-	fmt.Fprint(b, "============================================")
+	fmt.Fprintln(b, "===============================================")
+	fmt.Fprintln(b, "               WK0XXK00000KXO0W                ")
+	fmt.Fprintln(b, "            WKko;'''.........,ldOXW            ")
+	fmt.Fprintln(b, "         NOl;.  .,.        .,.   .;oON         ")
+	fmt.Fprintln(b, "      W0l'      .'.         ..       ,oKW      ")
+	fmt.Fprintln(b, "    WO:.                               .lK     ")
+	fmt.Fprintln(b, "   Xl.           .';::::;,..             'xN   ")
+	fmt.Fprintln(b, "  K;         .;ok00OOkkkOO00xc.           .lX  ")
+	fmt.Fprintln(b, " K;        ,d00xc,..     ..;dKKo.           lN ")
+	fmt.Fprintln(b, " l       .dX0l.              .dXO,          .d ")
+	fmt.Fprintln(b, " .      'OXd.      .,coool;.   lNO.          ' ")
+    fmt.Fprintln(b, "       .kNo.      ;OXNWMMMWk'  'ON:            ")
+    fmt.Fprintln(b, "       cNO.      '0XxOWMMMMWl  '0Nc            ")
+    fmt.Fprintln(b, "       oWx.      ,KXllKNNWXd. .oNO.            ")
+    fmt.Fprintln(b, "       oWx.       lX0l;;;;'.'cOXx'           . ")
+	fmt.Fprintln(b, " '     ;XK,        ,d000OkkOK0d,             c ")
+	fmt.Fprintln(b, " o.    .xNd.         .';;::;'.              ;K ")
+	fmt.Fprintln(b, " Xc     'OXo.                              :K  ")
+	fmt.Fprintln(b, "  Xl.    .kXx'                           .oX   ")
+	fmt.Fprintln(b, "   Wk,    .lKKo'                       .l0W    ")
+	fmt.Fprintln(b, "     Xx,    .o0Kx:.                 .:xKW      ")
+	fmt.Fprintln(b, "       NOc'   .;d00Odl:;,'...'';:ldOXW         ")
+	fmt.Fprintln(b, "         WXOo;.. .':oxkOOOO000KNW              ")
+	fmt.Fprintln(b, "             WKxc,.    ..';cox0NW              ")
+	fmt.Fprintln(b, "===============================================")
+	fmt.Fprintln(b, "        CANDYROMS - TASTE THE SWEETNESS!       ")
+    fmt.Fprintln(b, "===============================================")
+	fmt.Fprintf(b, "%s=%s\n", "HOST_ARCH", make_vars["HOST_ARCH"])
+	fmt.Fprintf(b, "%s=%s\n", "HOST_2ND_ARCH", make_vars["HOST_2ND_ARCH"])
+	fmt.Fprintf(b, "%s=%s\n", "HOST_OS", make_vars["HOST_OS"])
+	fmt.Fprintf(b, "%s=%s\n", "HOST_OS_EXTRA", make_vars["HOST_OS_EXTRA"])
+	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_OS", make_vars["HOST_CROSS_OS"])
+	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_ARCH", make_vars["HOST_CROSS_ARCH"])
+	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_2ND_ARCH", make_vars["HOST_CROSS_2ND_ARCH"])
+	fmt.Fprintln(b, "=============================================================")
+	fmt.Fprintf(b, "%s=%s\n", "CANDY_VERSION", make_vars["CANDY_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "BUILD_ID", make_vars["BUILD_ID"])
+	fmt.Fprintf(b, "%s=%s\n", "OUT_DIR", make_vars["OUT_DIR"])
+	fmt.Fprintln(b, "=============================================================")
+	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION_CODENAME", make_vars["PLATFORM_VERSION_CODENAME"])
+	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_PRODUCT", make_vars["TARGET_PRODUCT"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_BUILD_VARIANT", make_vars["TARGET_BUILD_VARIANT"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_BUILD_TYPE", make_vars["TARGET_BUILD_TYPE"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_GCC_VERSION", make_vars["TARGET_GCC_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_ARCH", make_vars["TARGET_ARCH"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_ARCH_VARIANT", make_vars["TARGET_ARCH_VARIANT"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_CPU_VARIANT", make_vars["TARGET_CPU_VARIANT"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_ARCH", make_vars["TARGET_2ND_ARCH"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_ARCH_VARIANT", make_vars["TARGET_2ND_ARCH_VARIANT"])
+	fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_CPU_VARIANT", make_vars["TARGET_2ND_CPU_VARIANT"])
+	fmt.Fprintln(b, "=============================================================")
 
 	return b.String()
 }
